@@ -223,7 +223,7 @@ def format_trade_message(trade):
     tx = trade.get("transactionHash", "N/A")
 
     return (
-        f"🎉 New Polymarket trade detected\n"
+        f"🎉 New trade detected\n"
         f"Time: {ts}\n"
         f"Market: {title}\n"
         f"Side: {side}\n"
@@ -242,7 +242,10 @@ def format_trade_message(trade):
 
 if __name__ == "__main__":
     # Configuration
-    target_user = "0xde7be6d489bce070a959e0cb813128ae659b5f4b"  
+    target_users = [
+        "0xde7be6d489bce070a959e0cb813128ae659b5f4b",
+        "0xa39c488ea8269609aea27f5f8486044d839908bc"
+    ]
     limit = 100
 
     send_telegram_message(
@@ -250,6 +253,11 @@ if __name__ == "__main__":
         TELEGRAM_CHAT_ID,
         "✅ Test message from Python"
     )
-    
-    # Run the tracker
-    track_user_trades(target_user, limit)
+
+    # Run the tracker for each user
+    for user_address in target_users:
+        print("\n" + "#" * 70)
+        print(f"Tracking trades for: {user_address}")
+        print("#" * 70)
+        track_user_trades(user_address, limit)
+
