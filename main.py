@@ -275,7 +275,8 @@ if __name__ == "__main__":
     # Configuration
     target_users = [
         "0xde7be6d489bce070a959e0cb813128ae659b5f4b",
-        "0xa39c488ea8269609aea27f5f8486044d839908bc"
+        "0xa39c488ea8269609aea27f5f8486044d839908bc",
+        "0x9ea10c9f5eeadf149da34117a7882f2275c9df66" #SP
     ]
     limit = 100
 

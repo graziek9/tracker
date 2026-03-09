@@ -1,23 +1,6 @@
 first_trade_time,market,outcome,shares,avg_price,current_price,pnl,status
-2026-02-05 21:54:25,"Bitcoin Up or Down - February 5, 3:45PM-4:00PM ET",Down,44.3365,0.9753,0,-43.2435,OPEN
-2026-02-05 21:54:33,"Ethereum Up or Down - February 5, 3:45PM-4:00PM ET",Down,20.4062,0.98,0,-19.9981,OPEN
-2026-02-07 14:24:47,FC Schalke 04 vs. SG Dynamo Dresden: O/U 3.5,Under,10.5263,0.95,0,-9.9999,OPEN
-2026-02-07 18:53:07,Newcastle United FC vs. Brentford FC: O/U 4.5,Under,21.978,0.9099,0,-19.9999,OPEN
-2026-02-07 21:09:35,ACF Fiorentina vs. Torino FC: O/U 3.5,Under,35.0889,0.8549,0,-29.9999,OPEN
-2026-02-09 14:18:15,S&P 500 (SPX) Opens Up or Down on February 9?,Up,16.0065,0.6247,0,-9.9999,OPEN
-2026-02-09 23:12:01,FC Porto vs. Sporting CP: Both Teams to Score,No,22.9884,0.8699,0,-19.9999,OPEN
-2026-02-11 01:37:21,Pacers vs. Knicks,Knicks,12.1951,0.8199,0,-9.9999,OPEN
-2026-02-12 23:14:17,"Bitcoin Up or Down - February 12, 5:10PM-5:15PM ET",Down,22.2267,0.8979,0,-19.958,OPEN
-2026-02-13 20:24:53,Stade Rennais FC 1901 vs. Paris Saint-Germain FC: O/U 3.5,Under,11.3483,0.8811,0,-9.9999,OPEN
-2026-02-13 22:59:31,"Solana Up or Down - February 13, 4:45PM-5:00PM ET",Down,25.4891,0.9299,0,-23.7048,OPEN
-2026-02-26 15:29:08,S&P 500 (SPX) Opens Up or Down on February 26?,Up,115.8512,0.9494,0,-109.9999,OPEN
-2026-03-07 15:02:23,Blackburn Rovers FC vs. Portsmouth FC: O/U 1.5,Under,20.0,0.93,0,-18.6,OPEN
-2026-03-07 15:48:11,SC Freiburg vs. Bayer 04 Leverkusen: O/U 4.5,Under,10.0,0.9,0,-9,OPEN
-2026-03-07 15:48:47,1. FC Heidenheim 1846 vs. TSG 1899 Hoffenheim: O/U 4.5,Under,10.0,0.85,0,-8.5,OPEN
-2026-03-07 16:52:37,1. FSV Mainz 05 vs. VfB Stuttgart: O/U 3.5,Under,10.0,0.91,0,-9.1,OPEN
-2026-03-07 23:22:59,"UFC 326: Rodolfo Bellato vs. Luke Fernandez (Light Heavyweight, Early Prelims)",Luke Fernandez,24.1547,0.8399,0,-20.2899,OPEN
-2026-03-08 01:13:45,"UFC 326: Cody Garbrandt vs. Xiao Long (Bantamweight, Prelims)",Xiao Long,45.8077,0.8499,0,-38.9347,OPEN
-2026-03-08 10:08:21,FC Anyang vs. Jeju SK FC: Both Teams to Score,No,20.6185,0.9699,0,-19.9999,OPEN
-2026-03-09 18:52:41,US forces enter Iran by March 14?,No,75.0,0.89,0.925,2.625,OPEN
-2026-03-09 19:11:25,US forces enter Iran by March 31?,No,115.0,0.6849,0.75,7.4801,OPEN
-2026-03-09 20:19:07,Alcorn State Braves vs. Alabama State Hornets: O/U 142.5,Under,9.9908,0.9444,0.55,-3.9406,OPEN
+2026-03-09 18:52:41,US forces enter Iran by March 14?,No,75.0,0.89,0.885,-0.375,OPEN
+2026-03-09 21:35:53,CD Tondela vs. Rio Ave FC: O/U 3.5,Under,10.0,0.89,0.6085,-2.815,OPEN
+2026-03-09 22:15:15,West Ham United FC vs. Brentford FC: O/U 4.5,Under,15.0,0.89,0.9995,1.6425,OPEN
+2026-03-09 22:47:25,CD Tondela vs. Rio Ave FC: O/U 2.5,Under,20.0,0.96,0.93,-0.6,OPEN
+,US forces enter Iran by December 31?,Yes,20.0,0.57,0.55,-0.39999999999999813,OPEN
