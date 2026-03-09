@@ -32,4 +32,4 @@ jobs:
         git remote set-url origin [email protected]:graziek9/tracker.git
         git add seen_trades_*.json trade_log_*.csv
         git diff --quiet && git diff --staged --quiet || git commit -m "Update trade logs [automated]"
-        git push
+        git push# Test comment
