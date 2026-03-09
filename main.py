@@ -9,6 +9,14 @@ import pandas as pd
 import json
 from datetime import datetime
 
+from portfolio import (
+    fetch_portfolio,
+    fetch_trades,
+    get_first_trade_times,
+    display_portfolio,
+    log_positions
+)
+
 gamma_api = "https://gamma-api.polymarket.com"
 data_api = "https://data-api.polymarket.com"
 clob_api = "https://clob.polymarket.com"
@@ -294,5 +302,11 @@ if __name__ == "__main__":
         track_user_trades(user_address, limit)
 
     #####
+    user_address = "0x121785324CCa3fcf5a60D12ED8a96B93583C690a"
+    portfolio = fetch_portfolio(user_address)
+    trades = fetch_trades(user_address)
+    first_trade_times = get_first_trade_times(trades)
+    display_portfolio(user_address, portfolio, first_trade_times)
+    log_positions(user_address, portfolio, first_trade_times)
    
 
