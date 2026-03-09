@@ -16,6 +16,8 @@ clob_api = "https://clob.polymarket.com"
 TELEGRAM_BOT_TOKEN = "8652673090:AAHIQX1wJCKcCzLYb-tPI-q-sHPSyUudwyA"
 TELEGRAM_CHAT_ID = "5449810522"
 
+LOG_FILE = "polymarket_logbook.csv"
+
 ###################################################################
 #                                                                 #
 #                     User Trade Tracker                          #
@@ -263,8 +265,6 @@ def format_trade_message(trade):
 ###################################################################
 
 
-
-
 ###################################################################
 #                                                                 #
 #                     Main Execution                              #
@@ -291,4 +291,7 @@ if __name__ == "__main__":
         print(f"Tracking trades for: {user_address}")
         print("#" * 70)
         track_user_trades(user_address, limit)
+
+    #####
+   
 
