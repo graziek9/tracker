@@ -13,6 +13,9 @@ gamma_api = "https://gamma-api.polymarket.com"
 data_api = "https://data-api.polymarket.com"
 clob_api = "https://clob.polymarket.com"
 
+TELEGRAM_BOT_TOKEN = "8652673090:AAHIQX1wJCKcCzLYb-tPI-q-sHPSyUudwyA"
+TELEGRAM_CHAT_ID = "5449810522"
+
 def fetch_user_activity(user_address, limit):
     base_url = "https://data-api.polymarket.com/trades"
     params = {
@@ -167,6 +170,11 @@ def track_user_trades(user_address, limit):
         df_new = process_and_display_trades(new_trades)
         if df_new is not None:
             update_trade_log(df_new, user_address, trade_data)
+
+        for trade in new_trades:
+            msg = format_trade_message(trade)
+            if TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID:
+                send_telegram_message(TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, msg)
     else:
         print("✅ No new trades found.")
 
@@ -186,6 +194,46 @@ def track_user_trades(user_address, limit):
         print("\n📁 No trade log file found yet.")
 
 
+def send_telegram_message(bot_token, chat_id, message):
+    url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
+    payload = {
+        "chat_id": chat_id,
+        "text": message
+    }
+    try:
+        response = requests.post(url, data=payload, timeout=10)
+        response.raise_for_status()
+        print("📩 Telegram alert sent.")
+    except requests.exceptions.RequestException as e:
+        print(f"Failed to send Telegram message: {e}")
+
+
+def format_trade_message(trade):
+    ts = trade.get("timestamp")
+    if ts:
+        ts = datetime.fromtimestamp(ts).strftime("%d/%m/%Y %H:%M:%S")
+    else:
+        ts = "Unknown time"
+
+    title = trade.get("title", "Unknown market")
+    side = trade.get("side", "Unknown side")
+    outcome = trade.get("outcome", "Unknown outcome")
+    price = trade.get("price", "N/A")
+    size = trade.get("size", "N/A")
+    tx = trade.get("transactionHash", "N/A")
+
+    return (
+        f"🎉 New Polymarket trade detected\n"
+        f"Time: {ts}\n"
+        f"Market: {title}\n"
+        f"Side: {side}\n"
+        f"Outcome: {outcome}\n"
+        f"Price: {price}\n"
+        f"Size: {size}\n"
+        f"Tx: {tx}"
+    )
+
+
 ###################################################################
 #                                                                 #
 #                     Main Execution                              #
@@ -196,6 +244,12 @@ if __name__ == "__main__":
     # Configuration
     target_user = "0xde7be6d489bce070a959e0cb813128ae659b5f4b"  
     limit = 100
+
+    send_telegram_message(
+        TELEGRAM_BOT_TOKEN,
+        TELEGRAM_CHAT_ID,
+        "✅ Test message from Python"
+    )
     
     # Run the tracker
     track_user_trades(target_user, limit)
