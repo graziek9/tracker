@@ -165,16 +165,34 @@ def track_user_trades(user_address, limit):
 
     if new_tx_hashes:
         print(f"\n🎉 Found {len(new_tx_hashes)} NEW trades!")
-        new_trades = [t for t in trade_data if t['transactionHash'] in new_tx_hashes]
-        
-        df_new = process_and_display_trades(new_trades)
+        new_trades = [t for t in trade_data if t.get('transactionHash') in new_tx_hashes]
+
+        # For terminal/logging → newest first
+        new_trades_terminal = sorted(
+            new_trades,
+            key=lambda t: t.get("timestamp", 0),
+            reverse=True
+        )
+
+        # For Telegram → chronological order
+        new_trades_telegram = sorted(
+            new_trades,
+            key=lambda t: t.get("timestamp", 0)
+        )
+
+        # Terminal output (newest first)
+        df_new = process_and_display_trades(new_trades_terminal)
         if df_new is not None:
             update_trade_log(df_new, user_address, trade_data)
 
-        for trade in new_trades:
+        # Telegram alerts (oldest first)
+        for trade in new_trades_telegram:
             msg = format_trade_message(trade)
             if TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID:
                 send_telegram_message(TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, msg)
+        
+
+
     else:
         print("✅ No new trades found.")
 
