@@ -269,7 +269,7 @@ if __name__ == "__main__":
     send_telegram_message(
         TELEGRAM_BOT_TOKEN,
         TELEGRAM_CHAT_ID,
-        "✅ Test message from Python"
+        "✅ Code processing ..."
     )
 
     # Run the tracker for each user
