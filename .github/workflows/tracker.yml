@@ -29,7 +29,7 @@ jobs:
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git remote set-url origin [email protected]:graziek9/tracker.git
+        git remote set-url origin [email protected]:graziek9/tracker.git
         git add seen_trades_*.json trade_log_*.csv
         git diff --quiet && git diff --staged --quiet || git commit -m "Update trade logs [automated]"
         git push
