@@ -16,6 +16,12 @@ clob_api = "https://clob.polymarket.com"
 TELEGRAM_BOT_TOKEN = "8652673090:AAHIQX1wJCKcCzLYb-tPI-q-sHPSyUudwyA"
 TELEGRAM_CHAT_ID = "5449810522"
 
+###################################################################
+#                                                                 #
+#                     User Trade Tracker                          #
+#                                                                 #
+###################################################################
+
 def fetch_user_activity(user_address, limit):
     base_url = "https://data-api.polymarket.com/trades"
     params = {
@@ -211,7 +217,6 @@ def track_user_trades(user_address, limit):
     else:
         print("\n📁 No trade log file found yet.")
 
-
 def send_telegram_message(bot_token, chat_id, message):
     url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
     payload = {
@@ -224,7 +229,6 @@ def send_telegram_message(bot_token, chat_id, message):
         print("📩 Telegram alert sent.")
     except requests.exceptions.RequestException as e:
         print(f"Failed to send Telegram message: {e}")
-
 
 def format_trade_message(trade):
     ts = trade.get("timestamp")
@@ -250,6 +254,15 @@ def format_trade_message(trade):
         f"Size: {size}\n"
         f"Tx: {tx}"
     )
+
+
+###################################################################
+#                                                                 #
+#                     User Portfolio                              #
+#                                                                 #
+###################################################################
+
+
 
 
 ###################################################################
