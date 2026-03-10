@@ -1,6 +1,4 @@
 first_trade_time,market,outcome,shares,avg_price,current_price,pnl,status
-2026-03-09 18:52:41,US forces enter Iran by March 14?,No,75.0,0.89,0.885,-0.375,OPEN
-2026-03-09 21:35:53,CD Tondela vs. Rio Ave FC: O/U 3.5,Under,10.0,0.89,0.9995,1.095,OPEN
-2026-03-09 22:15:15,West Ham United FC vs. Brentford FC: O/U 4.5,Under,15.0,0.89,0.9995,1.6425,OPEN
-2026-03-09 22:47:25,CD Tondela vs. Rio Ave FC: O/U 2.5,Under,20.0,0.96,0.94,-0.4,OPEN
-,US forces enter Iran by December 31?,Yes,20.0,0.57,0.57,0,OPEN
+2026-03-09 18:52:41,US forces enter Iran by March 14?,No,124.989981,0.8896,0.875,-1.8248537225999981,OPEN
+2026-03-10 00:18:15,"Will Elon Musk post 360-379 tweets from March 3 to March 10, 2026?",No,20.0,0.917,0.985,1.36,OPEN
+,US forces enter Iran by December 31?,Yes,20.0,0.57,0.615,0.9000000000000019,OPEN
