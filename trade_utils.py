@@ -6,6 +6,7 @@ import pandas as pd
 import requests
 
 from config import TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, DATA_DIR
+from notifications import send_telegram_message
 
 
 def fetch_user_activity(user_address, limit):
@@ -205,6 +206,11 @@ def track_user_trades(user_label, user_address, limit):
         if df_new is not None:
             update_trade_log(df_new, user_label)
 
+        # Send positions FIRST
+            from portfolio_utils import send_positions_summary
+            send_positions_summary(user_label, user_address)
+
+        # Then send trade alerts
         for trade in new_trades_telegram:
             msg = format_trade_message(trade, user_label, user_address)
             send_telegram_message(TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, msg)
@@ -229,3 +235,6 @@ def track_user_trades(user_label, user_address, limit):
         print(f"\n📈 Total trades in log: {len(df_log)} (showing top 10)")
     else:
         print("\n📁 No trade log file found yet.")
+
+ 
+    

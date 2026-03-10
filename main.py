@@ -24,6 +24,9 @@ from trade_utils import (
     send_telegram_message
 )
 
+from notifications import send_telegram_message
+
+
 ##########################################################
 
 if __name__ == "__main__":
