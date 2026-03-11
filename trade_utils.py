@@ -207,8 +207,8 @@ def track_user_trades(user_label, user_address, limit):
             update_trade_log(df_new, user_label)
 
         # Send positions FIRST
-            from portfolio_utils import send_positions_summary
-            send_positions_summary(user_label, user_address)
+            '''from portfolio_utils import send_positions_summary
+            send_positions_summary(user_label, user_address)'''
 
         # Then send trade alerts
         for trade in new_trades_telegram:
