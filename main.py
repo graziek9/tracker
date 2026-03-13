@@ -26,6 +26,7 @@ from trade_utils import (
 
 from notifications import send_telegram_message
 
+import time
 
 
 
@@ -64,30 +65,32 @@ def get_no_price():
 ##########################################################
 
 if __name__ == "__main__":
-    send_telegram_message(
-        TELEGRAM_BOT_TOKEN,
-        TELEGRAM_CHAT_ID,
-        "✅ Code processing ..."
-    )
+    while True:
+        send_telegram_message(
+            TELEGRAM_BOT_TOKEN,
+            TELEGRAM_CHAT_ID,
+            "✅ Code processing ..."
+        )
 
-    for user_label, user_address in TARGET_USERS.items():
-        print("\n" + "#" * 70)
-        print(f"Tracking trades for: {user_label}")
-        print("#" * 70)
-        track_user_trades(user_label, user_address, LIMIT)
+        for user_label, user_address in TARGET_USERS.items():
+            print("\n" + "#" * 70)
+            print(f"Tracking trades for: {user_label}")
+            print("#" * 70)
+            track_user_trades(user_label, user_address, LIMIT)
 
-    portfolio = fetch_portfolio(PORTFOLIO_USER_ADDRESS)
-    trades = fetch_trades(PORTFOLIO_USER_ADDRESS)
-    first_trade_times = get_first_trade_times(trades)
-    display_portfolio(PORTFOLIO_USER_ADDRESS, portfolio, first_trade_times)
-    log_positions(PORTFOLIO_USER_ADDRESS, portfolio, first_trade_times)
+        portfolio = fetch_portfolio(PORTFOLIO_USER_ADDRESS)
+        trades = fetch_trades(PORTFOLIO_USER_ADDRESS)
+        first_trade_times = get_first_trade_times(trades)
+        display_portfolio(PORTFOLIO_USER_ADDRESS, portfolio, first_trade_times)
+        log_positions(PORTFOLIO_USER_ADDRESS, portfolio, first_trade_times)
 
-    # Fetch NO price
-    no_price = get_no_price()
-    send_telegram_message(
-        "8691017421:AAH5z290vgFau1SqIBC0DkfkvTfei3obtyk",
-        "5449810522",
-        f" ------------------ \n NO price PM: {no_price}"
-    )
+        # Fetch NO price
+        no_price = get_no_price()
+        send_telegram_message(
+            "8691017421:AAH5z290vgFau1SqIBC0DkfkvTfei3obtyk",
+            "5449810522",
+            f" ------------------ \n NO price PM: {no_price}"
+        )
+        time.sleep(300)
 
     
