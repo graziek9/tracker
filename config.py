@@ -19,6 +19,7 @@ TARGET_USERS = {
     "user_P3": "0xc6dd722558dbfbd8fa780efcbe819ed8c6604b9f",
     "user_P4": "0x9ec7da81a2da3d47a47dd281b1ecf2cf2b3a35c0",
     "user_P5": "0x56ebe2a8eb1b9bccfd3059f981f9c987e45e076a",
+    "user_W1": "0x5f211a24da4c005d9438a1ea269673b85ed0b376"
 }
 
 LIMIT = 100
