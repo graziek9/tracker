@@ -65,7 +65,7 @@ def get_no_price():
 ##########################################################
 
 if __name__ == "__main__":
-    while True:
+    #while True:
         send_telegram_message(
             TELEGRAM_BOT_TOKEN,
             TELEGRAM_CHAT_ID,
@@ -91,6 +91,6 @@ if __name__ == "__main__":
             "5449810522",
             f" ------------------ \n NO price PM: {no_price}"
         )
-        time.sleep(300)
+        #time.sleep(300)
 
     
