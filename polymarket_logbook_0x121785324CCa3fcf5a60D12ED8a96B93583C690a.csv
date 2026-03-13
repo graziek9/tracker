@@ -1,9 +1,6 @@
 first_trade_time,market,outcome,shares,avg_price,current_price,pnl,status
-2026-03-09 18:52:41,US forces enter Iran by March 14?,No,124.989981,0.8896,0.935,5.674545137400001,OPEN
-2026-03-12 01:14:13,Capitals vs. Flyers,Capitals,6.944443,0.719999,0,-4.999992015557,OPEN
-2026-03-12 01:16:35,US x Iran ceasefire by March 31?,No,19.197674,0.729254,0.745,0.3022865748040024,OPEN
-2026-03-12 01:46:49,Antalya 3: Ekaterine Gorgodze vs Anhelina Kalinina,Anhelina Kalinina,11.494246,0.869999,0.95,0.9195511742460001,OPEN
-2026-03-12 08:38:35,Iran Nuke before 2027?,No,11.50743,0.869003,0.865,-0.0460642422899995,OPEN
-2026-03-12 09:24:51,Antalya 3: Carole Monnet vs Dominika Salkova,Carole Monnet,10.638283,0.939999,0.935,-0.05318077671699971,OPEN
-2026-03-12 09:25:09,Kigali 2: Corentin Denolly vs Zdenek Kolar,Zdenek Kolar,10.5263,0.95,0.955,0.0526315,OPEN
-,US forces enter Iran by December 31?,Yes,20.0,0.57,0.555,-0.29999999999999627,OPEN
+2026-03-09 18:52:41,US forces enter Iran by March 14?,No,184.989981,0.915677,0.954,7.089371041862995,OPEN
+2026-03-12 01:16:35,US x Iran ceasefire by March 31?,No,19.197674,0.729254,0.795,1.2621702748040016,OPEN
+2026-03-12 08:38:35,Iran Nuke before 2027?,No,11.50743,0.869003,0.86,-0.10360139228999801,OPEN
+2026-03-13 16:35:49,US forces enter Iran by March 31?,Yes,14.705881,0.339999,0.355,0.22060292088100034,OPEN
+,US forces enter Iran by December 31?,Yes,20.0,0.57,0.61,0.8000000000000018,OPEN
