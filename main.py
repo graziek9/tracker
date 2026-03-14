@@ -85,12 +85,12 @@ if __name__ == "__main__":
         log_positions(PORTFOLIO_USER_ADDRESS, portfolio, first_trade_times)
 
         # Fetch NO price
-        no_price = get_no_price()
+        '''no_price = get_no_price()
         send_telegram_message(
             "8691017421:AAH5z290vgFau1SqIBC0DkfkvTfei3obtyk",
             "5449810522",
             f" ------------------ \n NO price PM: {no_price}"
-        )
+        )'''
         #time.sleep(300)
 
     

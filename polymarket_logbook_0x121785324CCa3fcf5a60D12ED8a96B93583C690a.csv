@@ -1,6 +1,8 @@
 first_trade_time,market,outcome,shares,avg_price,current_price,pnl,status
-2026-03-09 18:52:41,US forces enter Iran by March 14?,No,184.989981,0.915677,0.9605,8.291805918363005,OPEN
-2026-03-12 01:16:35,US x Iran ceasefire by March 31?,No,19.197674,0.729254,0.805,1.4541470148040019,OPEN
-2026-03-12 08:38:35,Iran Nuke before 2027?,No,11.50743,0.869003,0.86,-0.10360139228999801,OPEN
-2026-03-13 16:35:49,US forces enter Iran by March 31?,Yes,14.705881,0.339999,0.345,0.07354411088099982,OPEN
-,US forces enter Iran by December 31?,Yes,20.0,0.57,0.675,2.100000000000002,OPEN
+2026-03-12 01:16:35,US x Iran ceasefire by March 31?,No,36.844727,0.787085,0.845,2.133862364204995,OPEN
+2026-03-12 08:38:35,Iran Nuke before 2027?,No,11.50743,0.869003,0.85,-0.21867569228999875,OPEN
+2026-03-14 02:08:57,Will Mercedes be the 2026 F1 Constructors' Champion?,Yes,70.0,0.74,0.755,1.05,OPEN
+2026-03-14 11:16:57,Will Wagner Moura win Best Actor at the 98th Academy Awards?,No,15.690375,0.955999,0.952,-0.06274580962499976,OPEN
+2026-03-14 11:17:03,Will Leonardo DiCaprio win Best Actor at the 98th Academy Awards?,No,15.72326,0.953999,0.9525,-0.023569166740000248,OPEN
+2026-03-14 11:17:11,Will Ethan Hawke win Best Actor at the 98th Academy Awards?,No,15.259352,0.982999,0.9815,-0.02287376864799857,OPEN
+,US forces enter Iran by December 31?,Yes,20.0,0.57,0.685,2.300000000000004,OPEN
